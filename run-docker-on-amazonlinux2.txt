@@ -1,0 +1,4 @@
+touch Dockerfile
+docker build -t hello-world .
+docker images --filter reference=hello-world // verify image was created
+docker run -t -i -p 80:80 hello-world // run container interactively and map port 80 on the container to port 80 on the host
